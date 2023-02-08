@@ -4,15 +4,17 @@ import './Timer.css'
 
 const Count = () => {
   const Ref = useRef(null);
-  const [timer, setTimer] = useState("00:00:00");
+  const [timer, setTimer] = useState("00: 00: 00: 00");
 
   const getTimeRemaining = (e) => {
     const total = Date.parse(e) - Date.parse(new Date());
+    const days = Math.floor(total / (1000 * 60 * 60 * 24));
     const seconds = Math.floor((total / 1000) % 60);
     const minutes = Math.floor((total / 1000 / 60) % 60);
     const hours = Math.floor((total / 1000 / 60 / 60) % 24);
     return {
       total,
+      days,
       hours,
       minutes,
       seconds,
@@ -20,13 +22,14 @@ const Count = () => {
   };
 
   const startTimer = (e) => {
-    let { total, hours, minutes, seconds } = getTimeRemaining(e);
+    let { total,days, hours, minutes, seconds } = getTimeRemaining(e);
     if (total >= 0) {
-      setTimer(
+      setTimer((days > 9 ? days: "0" + days)+
+      ": " +
         (hours > 9 ? hours : "0" + hours) +
-          " : " +
+          ": " +
           (minutes > 9 ? minutes :"0" + minutes) +
-          " : " +
+          ": " +
           (seconds > 9 ? seconds : "0" + seconds)
       );
     }
@@ -44,6 +47,7 @@ const Count = () => {
 
 		//SET THE DATE HERE ***
     let deadline = new Date("March 10, 2023 00:00:00"); 
+    // let deadline = new Date("Feb 08, 2023 08:03:00"); 
 		
     deadline.setSeconds(deadline.getSeconds() + 10);
     return deadline;
@@ -58,6 +62,7 @@ const Count = () => {
       <div className="d-flex align-items-center flex-column">
         <h2 className="timerStyle">{timer}</h2>
 				<div className="d-flex timeText">
+					<p>DAYS</p>
 					<p>HOURS</p>
 					<p>MINUTES</p>
 					<p>SECONDS</p>

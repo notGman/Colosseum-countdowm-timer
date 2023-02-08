@@ -1,23 +1,31 @@
 .timerStyle{
   font-family: Montserrat, sans-serif;
   font-size: 77.77px;
-  width: 26rem;
-  margin-left: 3rem;
+  width: 36rem;
+  margin-left: 8rem;
 }
 .timeText{
   font-size: 20px;
-  gap:4rem;
+  min-width: 26rem;
+  margin-left: 3rem;
+  display: flex;
+  justify-content: space-between;
   margin-top: -10px;
 }
 @media only screen and (max-width:748px){
   .timerStyle{
     width: 24rem;
-    font-size: 60px;
+    font-size: 50px;
     text-align: center;
     margin-left: 0;
   }
   .timeText{
     font-size: 15px;
-    gap:2.9rem
+    min-width: 10rem;
+    margin-right: 2.5rem;
+    gap: 2.6rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
   }
 }
