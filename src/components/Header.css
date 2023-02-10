@@ -1,0 +1,23 @@
+@media only screen and (max-width:748px) {
+  .headerLogo{
+    width: 4rem !important;
+  }
+  .img{
+    width: 20rem;
+    /* margin-top: 4rem; */
+  }
+  .centerImg{
+    width: 12rem !important;
+    height: 8rem !important;
+    margin-top: 6rem !important;
+  }
+  .centerLogo{
+    width: 6rem !important ;
+  }
+}
+
+@media only screen and (max-width:448px) {
+  .headerLogo{
+    width: 3rem !important;
+  }
+}

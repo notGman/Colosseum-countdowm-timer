@@ -47,7 +47,7 @@ const Count = () => {
 
 		//SET THE DATE HERE ***
     let deadline = new Date("March 10, 2023 00:00:00"); 
-    // let deadline = new Date("Feb 08, 2023 08:03:00"); 
+    // let deadline = new Date("Feb 08, 2023 19:07:40"); 
 		
     deadline.setSeconds(deadline.getSeconds() + 10);
     return deadline;
@@ -58,9 +58,9 @@ const Count = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className="mt-5">
       <div className="d-flex align-items-center flex-column">
-        <h2 className="timerStyle">{timer}</h2>
+        <h2 className="timerStyle text-start">{timer}</h2>
 				<div className="d-flex timeText">
 					<p>DAYS</p>
 					<p>HOURS</p>

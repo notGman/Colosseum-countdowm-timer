@@ -1,29 +1,45 @@
 .timerStyle{
   font-family: Montserrat, sans-serif;
   font-size: 77.77px;
-  width: 36rem;
-  margin-left: 8rem;
+  width: 33rem;
+  margin-left: 1rem
 }
 .timeText{
   font-size: 20px;
-  min-width: 26rem;
-  margin-left: 3rem;
+  min-width: 27rem;
+  margin-right: 1rem;
   display: flex;
   justify-content: space-between;
   margin-top: -10px;
 }
 @media only screen and (max-width:748px){
   .timerStyle{
-    width: 24rem;
+    width: 70%;
     font-size: 50px;
     text-align: center;
-    margin-left: 0;
+    margin-left: 2rem;
+    margin-top: 2rem;
   }
   .timeText{
     font-size: 15px;
-    min-width: 10rem;
-    margin-right: 2.5rem;
-    gap: 2.6rem;
+    min-width: 55%;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+  }
+}
+@media only screen and (max-width:448px){
+  .timerStyle{
+    width: 100%;
+    font-size: 50px;
+    text-align: center !important;
+    margin-right:2rem;
+  }
+  .timeText{
+    font-size: 15px;
+    min-width: 80%;
+    margin-left: 1.5rem;
     display: flex;
     justify-content: space-between;
     margin-top: -10px;
